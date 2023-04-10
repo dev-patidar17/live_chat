@@ -9,18 +9,15 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>chatone-live</artifactId>
+	<artifactId>live_chat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>chatone-live</name>
+	<name>live_chat</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-webflux</artifactId>
@@ -64,6 +61,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-websocket</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.appengine/appengine-api-1.0-sdk -->
+		<!-- <dependency>
+		    <groupId>com.google.appengine</groupId>
+		    <artifactId>appengine-api-1.0-sdk</artifactId>
+		</dependency> -->
+
 
 	</dependencies>
 
@@ -79,6 +82,15 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>2.2.0</version>
+				<configuration>
+					<version>1</version>
+					<projectId>firebase-tutorial-db</projectId>
 				</configuration>
 			</plugin>
 		</plugins>

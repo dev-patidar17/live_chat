@@ -13,9 +13,9 @@ services:
       - resolute
 
   C-container:
-    image: chatone-live
+    image: live-chat
     ports:
-      - 8080:8080
+      - 8000:8000
     environment:
       - spring_rabbitmq_host=rabbitmq-container
       - spring_rabbitmq_port=5672
